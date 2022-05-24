@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+     var product = ViewData["Product"] as ProductModel;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@ViewData["Greeting"]!
+ 
+@product.ProductID<br>
+@product.Name<br>
+@product.Brand<br>
+@product.Price<br>

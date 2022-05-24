@@ -1,0 +1,160 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding-top: 80px;
+    height: 1900px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+@supports (position: sticky) {
+    body {
+        padding-top: 0;
+    }
+
+    header {
+        position: sticky;
+    }
+}
+
+.navbar {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+    .navbar .nav {
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        float: right;
+        margin-right: 5%;
+    }
+
+        .navbar .nav .item {
+            font-weight: bold;
+            font-family: Avenir Next Vietnamese,Avenir Next,Helvetica Neue;
+            display: inline-block;
+            font-size: 25px;
+            padding: 5px;
+            font-weight: 300;
+            line-height: 80px;
+            margin-right: 20px;
+            transition: 0.5s ease;
+        }
+
+        .navbar .nav .scroll_fly {
+            list-style: none;
+            display: inline-block;
+            font-size: 18px;
+            padding: 5px;
+            font-weight: 300;
+            line-height: 80px;
+            margin-right: 20px;
+            transition: 0.5s ease;
+        }
+
+
+
+        .navbar .nav .item a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .navbar .nav .item a {
+            position: relative;
+            z-index: 1;
+        }
+
+            .navbar .nav .item a:hover {
+                text-decoration: inherit;
+                vertical-align: inherit;
+            }
+
+
+
+            .navbar .nav .item a:hover {
+                color: #91640F;
+            }
+
+            .navbar .nav .item a:after {
+                padding-top: 40px;
+                padding-bottom: 40px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                height: 1px;
+                content: '.';
+                color: transparent;
+                background: #F1C40F;
+                visibility: none;
+                opacity: 0;
+                z-index: -1;
+            }
+
+            .navbar .nav .item a:hover:after {
+                opacity: 1;
+                visibility: visible;
+                height: 100%;
+            }
+
+    .navbar .logo img {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+.scrolled {
+    transition: 0.5s ease;
+}
+
+    .scrolled.navbar {
+        height: 50px;
+        background-color: rgba(0, 0, 0, 1);
+        transition: 0.5s ease;
+    }
+
+
+        .scrolled.navbar .nav .item {
+            line-height: 40px;
+            color: white;
+            transition: 0.5s ease;
+        }
+
+
+        .scrolled.navbar .logo {
+            transition: 0.5s ease;
+        }
